@@ -14,7 +14,7 @@ function Footer() {
       <div className="container mx-auto grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 gap-5 text-center ">
         <div className="max-w-xs mx-auto md:mx-0">
           <h2 className="text-2xl font-bold mb-4 text-left">Lilium</h2>
-          <p className="text-white text-[15px] text-sm text-left">
+          <p className="text-[#d4d1d1] text-[15px] text-sm text-left">
             We bring beauty and joy to your life with our exquisite flowers. Let
             us make every moment bloom with love and color. Our fresh blooms are
             carefully selected to brighten your day. Discover the perfect
@@ -24,7 +24,7 @@ function Footer() {
 
         <div>
           <h2 className="text-xl font-semibold mb-4">Links</h2>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-[#d4d1d1]">
             <li>
               <a href="#" className="hover:text-pink-400 transition">
                 Home
@@ -50,7 +50,7 @@ function Footer() {
 
         <div>
           <h2 className="text-xl font-semibold mb-4">Support</h2>
-          <ul className="space-y-2 ">
+          <ul className="space-y-2 text-[#d4d1d1] ">
             <li>
               <a href="#" className="hover:text-pink-400 transition">
                 FAQ
@@ -83,7 +83,7 @@ function Footer() {
                 icon={faMapMarkerAlt}
                 className="text-[20px] pr-[5px]"
               />{" "}
-              <span>505 Silk Rd, New York</span>
+              <span className="text-[#d4d1d1]">505 Silk Rd, New York</span>
             </div>
             <div>
               {" "}
@@ -91,8 +91,8 @@ function Footer() {
                 icon={faPhone}
                 className="text-[18px] pr-[5px]"
               />
-              <span>
-                <a href="tel:">Phone: +1 234 122 122</a>
+              <span className="text-[#d4d1d1]">
+                <a href="tel:">+1 234 122 122</a>
               </span>
             </div>
           </div>

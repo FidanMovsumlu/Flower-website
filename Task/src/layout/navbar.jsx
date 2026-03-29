@@ -10,7 +10,7 @@ function Navbar() {
         Lilium
       </h1>
 
-      {/* DESKTOP MENU */}
+    
       <ul className="hidden md:flex gap-10 text-lg font-medium">
         <li className="text-pink-300 cursor-pointer"><Link to={"/"}>Home</Link></li>
         <li className="text-pink-300 cursor-pointer"><Link to={"/about"}>About</Link></li>
@@ -18,14 +18,12 @@ function Navbar() {
         <li className="text-pink-300 cursor-pointer"><Link to={"/contact"}>Contact</Link></li>
       </ul>
 
-      {/* ICONS (desktop) */}
       <div className="hidden md:flex gap-6">
         <i className="fa-solid fa-heart cursor-pointer hover:text-pink-300"></i>
         <i className="fa-solid fa-cart-shopping cursor-pointer hover:text-pink-300"></i>
-        <i className="fa-solid fa-user cursor-pointer hover:text-pink-300"></i>
+        <Link to={"/register"}><i className="fa-solid fa-user cursor-pointer hover:text-pink-300 mb-[10px]"></i></Link>
       </div>
 
-      {/* BURGER ICON (mobile) */}
       <div 
         className="md:hidden cursor-pointer"
         onClick={() => setOpen(!open)}
