@@ -1,9 +1,8 @@
 import React from 'react'
-import Navbar from '../layout/navbar'
 function Home() {
   return (
     <div>
-      <Navbar/>
+      
      <div className="video-container">
       
       <video autoPlay muted loop playsInline className="video-bg">
@@ -69,7 +68,7 @@ They bring color,</p>
 <section className='container w-[90%] m-auto py-[50px]'>
   <div className='grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 mt-[60px]'>
 
-<div className='flex my-[20px] mx-[18px]'>
+<div className='flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2'>
   <div className='mr-[32px] mt-[10px]'>
     <img src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-1.png" alt="flower" className='w-[80px]' />
     </div>
@@ -79,7 +78,7 @@ They bring color,</p>
   </div>
 </div>
 
-<div className='flex my-[20px] mx-[18px]'>
+<div className='flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2'>
   <div className='mr-[32px] mt-[10px]'>
     <img src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-2.png" alt="flower" className='w-[80px] ' />
     </div>
@@ -89,7 +88,7 @@ They bring color,</p>
   </div>
 </div>
 
-<div className='flex my-[20px] mx-[18px]'>
+<div className='flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2'>
   <div className='mr-[32px] mt-[10px]'>
     <img src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-3.png" alt="flower" className='w-[80px]' />
     </div>
@@ -102,12 +101,13 @@ They bring color,</p>
   </div>
 </section>
 
-<section className='relative h-[400px] my-[60px] flex bg-[url("https://preview.colorlib.com/theme/florist/img/call-bg.jpg")] bg-cover bg-center'>
-  <div className='relative z-10 text-center mt-[10%] pl-[20px]'>
-    <h2 className='text-white text-5xl font-bold pattern'>
+<section className='relative h-[400px] my-[70px] flex bg-[url("https://preview.colorlib.com/theme/florist/img/call-bg.jpg")] bg-cover bg-center'>
+  <div className='relative z-10 text-center mt-[6%] pl-[20px]'>
+    <h2 className='text-white text-5xl font-bold pattern '>
     Let our plants make your
     </h2> <br />
-    <p className='text-white text-5xl font-bold pattern'>home more perfect.</p>
+    <p className='text-white text-5xl font-bold pattern mb-[30px]'>home more perfect.</p>
+    <button className='bg-[#717c3e] rounded-tr-[40px] rounded-bl-[40px] px-[25px] py-[10px] mt-[20px] text-[18px] font-bold tracking-[2px] text-white'><a href="">Explore Plants</a></button>
   </div>
 </section>
     </div>

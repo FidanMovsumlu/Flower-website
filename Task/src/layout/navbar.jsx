@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Link } from "react-router-dom";
 function Navbar() {
   const [open, setOpen] = useState(false)
 
@@ -12,10 +12,10 @@ function Navbar() {
 
       {/* DESKTOP MENU */}
       <ul className="hidden md:flex gap-10 text-lg font-medium">
-        <li className="hover:text-pink-300 cursor-pointer">Home</li>
-        <li className="hover:text-pink-300 cursor-pointer">About</li>
-        <li className="hover:text-pink-300 cursor-pointer">Product</li>
-        <li className="hover:text-pink-300 cursor-pointer">Contact</li>
+        <li className="text-pink-300 cursor-pointer"><Link to={"/"}>Home</Link></li>
+        <li className="text-pink-300 cursor-pointer"><Link to={"/about"}>About</Link></li>
+        <li className="text-pink-300 cursor-pointer"><Link to={"/product"}>Product</Link></li>
+        <li className="text-pink-300 cursor-pointer"><Link to={"/contact"}>Contact</Link></li>
       </ul>
 
       {/* ICONS (desktop) */}
@@ -40,10 +40,10 @@ function Navbar() {
         ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}>
         
         <ul className="flex flex-col items-center gap-4 text-[#eb9ac0]">
-          <li>Home</li>
-          <li>About</li>
-          <li>Product</li>
-          <li>Contact</li>
+          <li><Link  to={"/"}>Home</Link></li>
+          <li><Link to={"/about"}>About</Link></li>
+          <li><Link  to={"/product"}>Product</Link></li>
+          <li><Link to={"/contact"}>Contact</Link></li>
         </ul>
 
         {/* ICONS (mobile) */}
