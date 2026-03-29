@@ -1,14 +1,18 @@
-import React from 'react'
-
-
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/route";
 
 function App() {
-  return (
-    <div>
-     
-    </div>
-  )
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animasiya sürəti
+      once: true,     // bir dəfə işləsin
+    });
+  }, []);
+
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
