@@ -1,4 +1,6 @@
 import React from 'react'
+import OurTeam from '../components/ourteam'
+import VideoSection from '../components/videoSection'
 
 
 function About() {
@@ -47,22 +49,23 @@ Enjoy exploring our world of flowers!</p>
 </div>
 </section>
 
-<section className='container w-[90%] m-auto'>
-<div className='grid lg:grid-cols-3 xl:grid-cols-3 md:grid-cols-3 sm:grid-cols-1'>
-  <div></div>
-</div>
-</section>
 
+
+
+<section>
+  <OurTeam/>
+</section>
 
  <section className='relative h-[400px] my-[70px] flex bg-[url("https://cdn.shopify.com/s/files/1/1252/1803/files/ExpressDelivery-Desktop_1.jpg?v=1721097269")] bg-cover bg-center'>
         <div className="relative z-10 text-center mt-[6%] pl-[20px]">
           <h2 className="text-[#52A584] text-5xl font-bold pattern mt-[20px]">
           Fast delivery and excellent <br /> <br />service are our promise.
           </h2>
-      
+      <VideoSection/>
         </div>
       </section>
   
+
       </div>
   
   )

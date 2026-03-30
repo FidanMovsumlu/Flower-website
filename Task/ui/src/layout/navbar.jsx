@@ -8,7 +8,7 @@ const signOut = () => {
   localStorage.removeItem("id")
 }
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 px-6 md:px-10 py-4 flex items-center justify-between text-white">
+    <nav className="w-full absolute top-0 left-0 z-50 px-6 md:px-10 py-4 flex items-center justify-between text-white">
       
       <Link to={"/"}><h1 className="text-[35px] md:text-[55px] font-bold logo text-[#f2b2d0]">
         Lilium
@@ -26,7 +26,7 @@ const signOut = () => {
         <i className="fa-solid fa-heart cursor-pointer text-pink-300"></i>
         <i className="fa-solid fa-cart-shopping cursor-pointer text-pink-300"></i>
         {
-          id ? <Link to={"/login"}><i class="fa-solid fa-arrow-right-from-bracket  cursor-pointer text-pink-300 text-[20px] mb-[10px]"></i></Link> : <Link to={"/login"}><i class="fa-solid fa-arrow-right-to-bracket  cursor-pointer text-pink-300 text-[20px] mb-[10px]"></i></Link>
+          id ? <Link to={"/login"} onClick={signOut}><i class="fa-solid fa-arrow-right-from-bracket  cursor-pointer text-pink-300 text-[20px] mb-[10px]"></i></Link> : <Link to={"/login"}><i class="fa-solid fa-arrow-right-to-bracket  cursor-pointer text-pink-300 text-[20px] mb-[10px]"></i></Link>
         }
     
       </div>

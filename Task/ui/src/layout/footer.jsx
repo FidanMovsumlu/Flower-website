@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import {
   faInstagram,
   faFacebook,
@@ -26,24 +27,24 @@ function Footer() {
           <h2 className="text-xl font-semibold mb-4">Links</h2>
           <ul className="space-y-2 text-[#d4d1d1]">
             <li>
-              <a href="#" className="hover:text-pink-400 transition">
+              <Link to={"/"} className="hover:text-pink-400 transition">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-pink-400 transition">
-                About
-              </a>
+              <Link to={"/about"} className="hover:text-pink-400 transition">
+              About
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-pink-400 transition">
-                Product
-              </a>
+             <Link to={"/product"} className="hover:text-pink-400 transition">
+             Product
+             </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-pink-400 transition">
-                Contact
-              </a>
+               <Link to={"/contact"} className="hover:text-pink-400 transition">
+             Contact
+             </Link>
             </li>
           </ul>
         </div>
