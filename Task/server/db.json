@@ -1,5 +1,19 @@
 {
-    "users":[
-        
-    ]
+  "users": [
+    {
+      "name": "Fidan",
+      "surname": "Movsumlu",
+      "email": "fidan@gmail.com",
+      "pass": "12345",
+      "id": "XgAuWAxzw5E"
+    },
+    {
+      "name": "Salam",
+      "surname": "Salamov",
+      "email": "salam@gmail.com",
+      "pass": "12345",
+      "id": "PWkZrLWniZU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

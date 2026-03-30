@@ -19,7 +19,7 @@ function Home() {
             color,
           </p>
           <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[#f0c1ce]">
-            {" "}
+            
             calm, and a gentle touch of happiness to our lives.
           </p>
           <button className="bg-[#ea6da7] rounded-[50px] px-[25px] py-[10px] mt-[20px] text-[18px] font-bold tracking-[2px]">
@@ -148,7 +148,7 @@ function Home() {
       </section>
 
 
-<section className="bg-[#FDEDEE] py-[50px]">
+<section className="bg-[#FDEDEE] py-[80px]">
 <div className="container w-[90%] m-auto ">
   <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
     <div className="mt-[40px]" >
@@ -156,14 +156,14 @@ function Home() {
       <p className="text-[20px] my-[30px] text-[#525151]">Every flower tells a story of love and care.
 Choose <br /> the perfect bouquet to express your feelings. Discover <br /> beautiful flowers for every special moment.</p>
 
-<button className="bg-[#e77b9a]  rounded-tr-[40px] rounded-bl-[40px] px-[25px] py-[10px] mt-[20px] text-[18px] font-bold tracking-[2px] text-white">
+<button className="bg-[#e77b9a]  rounded-tr-[40px] rounded-bl-[40px] px-[25px] py-[10px] mt-[20px]  text-[18px] font-bold tracking-[2px] text-white">
             <a href="">Explore Bouquets</a>
           </button>
     </div>
     
-<div className="grid grid-cols-2 gap-4 h-[500px] ">
+<div className="grid grid-cols-2 gap-4 h-[500px] mt-[20px]">
   
-  {/* Sol tərəf */}
+  
   <div className="grid grid-rows-2 gap-4 h-full">
     <img
       src="/bouquet1.jpg"
@@ -175,7 +175,7 @@ Choose <br /> the perfect bouquet to express your feelings. Discover <br /> beau
     />
   </div>
 
-  {/* Sağ tərəf */}
+  
   <div className="h-full">
     <img
       src="/lily.jpg"

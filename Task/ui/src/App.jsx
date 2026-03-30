@@ -7,8 +7,8 @@ import router from "./routes/route";
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animasiya sürəti
-      once: true,     // bir dəfə işləsin
+      duration: 1000, 
+      once: true,     
     });
   }, []);
 
