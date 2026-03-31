@@ -34,7 +34,11 @@ function About() {
       <p className="text-[20px] my-[30px] text-[#dcdada]">Welcome to our flower shop! We create beautiful bouquets for every occasion. 
 Our goal is to make people happy with fresh and colorful flowers. 
 We care about quality and love every detail in our arrangements. 
-Fast delivery and excellent service are our promise. 
+Fast delivery and excellent service are our promise. Our flower shop offers fresh and high-quality flowers every day.
+We design unique bouquets for birthdays, weddings, and special events.
+Customer satisfaction is very important to us.
+We always try to bring joy and positive emotions with our flowers.
+Flowers are not just gifts, they are a way to show love and care.
 Enjoy exploring our world of flowers!</p>
 
 <button className="bg-[#895d6a] text-[#f1dbe1] rounded-tr-[40px] rounded-bl-[40px] px-[25px] py-[10px] mt-[20px]  text-[18px] font-bold tracking-[2px] text-white">
@@ -48,7 +52,6 @@ Enjoy exploring our world of flowers!</p>
   </div>
 </div>
 </section>
-
 
 
 
