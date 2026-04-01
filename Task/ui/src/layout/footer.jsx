@@ -84,7 +84,7 @@ function Footer() {
                 icon={faMapMarkerAlt}
                 className="text-[20px] pr-[5px]"
               />{" "}
-              <span className="text-[#d4d1d1]">505 Silk Rd, New York</span>
+              <span className="text-[#d4d1d1]">Street 13 Cefer Cabbarli</span>
             </div>
             <div>
               {" "}
