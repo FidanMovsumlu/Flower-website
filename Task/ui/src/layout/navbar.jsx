@@ -1,14 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+   const [isDark, setDark] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  const toggleTheme = () => {
+    setDark(!isDark);
+  };
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDark]);
 let id = localStorage.getItem("id")
 const signOut = () => {
   localStorage.removeItem("id")
 }
   return (
-    <nav className="w-full absolute top-0 left-0 z-50 px-6 md:px-10 py-2 flex items-center justify-between bg-[#efe1e9] text-white">
+  <div className={isDark ? "dark" : ""}>
+    <nav className="w-full absolute top-0 left-0 z-50 px-6 md:px-10 py-2 flex items-center justify-between bg-[#efe1e9] text-white dark:bg-[#1F1F1F]">
       
       <Link to={"/"}><h1 className="text-[35px] md:text-[55px] font-bold logo text-[#f45da4]">
         Lilium
@@ -22,13 +40,18 @@ const signOut = () => {
         <li className="text-[#f45da4] cursor-pointer"><Link to={"/contact"}>Contact</Link></li>
       </ul>
 
-      <div className="hidden md:flex gap-6">
+      <div className="hidden md:flex gap-4 text-[20px]">
         <i className="fa-solid fa-heart cursor-pointer text-[#f45da4]"></i>
         <i className="fa-solid fa-cart-shopping cursor-pointer text-[#f45da4]"></i>
+        <button onClick={toggleTheme}>
+{
+  isDark ? ( <i className="fa-regular fa-lightbulb cursor-pointer text-[#f45da4] mb-[10px]"></i>) : (<i className="fa-solid fa-moon cursor-pointer text-[#f45da4] mb-[10px] "></i>)
+}
+        </button>
         {
           id ? <Link to={"/login"} onClick={signOut}><i class="fa-solid fa-arrow-right-from-bracket  cursor-pointer text-[#f45da4] text-[20px] mb-[10px]"></i></Link> : <Link to={"/login"}><i class="fa-solid fa-arrow-right-to-bracket  cursor-pointer text-[#f45da4] text-[20px] mb-[10px]"></i></Link>
         }
-    
+  
       </div>
 
       <div 
@@ -55,11 +78,19 @@ const signOut = () => {
         <div className="flex gap-6 text-[#f45da4]">
           <i className="fa-solid fa-heart"></i>
           <i className="fa-solid fa-cart-shopping"></i>
-          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+         <button onClick={toggleTheme}>
+{
+  isDark ? ( <i className="fa-regular fa-lightbulb cursor-pointer text-[#f45da4] mb-[10px]"></i>) : (<i className="fa-solid fa-moon cursor-pointer text-[#f45da4] mb-[10px] "></i>)
+}
+        </button>
+          {
+          id ? <Link to={"/login"} onClick={signOut}><i class="fa-solid fa-arrow-right-from-bracket  cursor-pointer text-[#f45da4] text-[20px] mb-[10px]"></i></Link> : <Link to={"/login"}><i class="fa-solid fa-arrow-right-to-bracket  cursor-pointer text-[#f45da4] text-[20px] mb-[10px]"></i></Link>
+        }
         </div>
       </div>
 
     </nav>
+    </div>
   )
 }
 

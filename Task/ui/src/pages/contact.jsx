@@ -13,33 +13,33 @@ import {
 function Contact() {
   return (
     <div>
-      <section  className='mt-[10%] bg-[#efe1e9] py-[10px]'>
+      <section  className='mt-[10%] bg-[#efe1e9] py-[10px] dark:bg-gray-700'>
 <div className='container m-auto w-[90%]'>
-<h1 className='text-[50px] text-[#b17989]  find my-[30px]'>Contact Us</h1>
+<h1 className='text-[50px] text-[#b17989]  find my-[30px] '>Contact Us</h1>
 <div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
   <div className='flex flex-col gap-8'>
 
 <div className='flex gap-8'>
   <div className='text-[20px] mt-[4px] text-[#8b5d6a]  bg-[#e1b4c1] p-[18px] rounded-[20px]'><BsTelephone /></div>
   <div>
-    <p className='text-[20px]'>Phone</p>
-    <a href="tel:" className='text-[18px]'>(555) 284-9103</a>
+    <p className='text-[20px] dark:text-white'>Phone</p>
+    <a href="tel:" className='text-[18px] dark:text-white'>(555) 284-9103</a>
   </div>
 </div>
 
 <div className='flex gap-8'>
   <div className='text-[20px] mt-[4px] text-[#8b5d6a]  bg-[#e1b4c1] p-[18px] rounded-[20px]'><LuMail /></div>
   <div>
-    <p className='text-[20px]'>Email</p>
-    <a href="mailto:hello@atelierstudio.com" className='text-[18px]'>hello@atelierstudio.com</a>
+    <p className='text-[20px] dark:text-white'>Email</p>
+    <a href="mailto:hello@atelierstudio.com" className='text-[18px] dark:text-white'>hello@atelierstudio.com</a>
   </div>
 </div>
 
 <div className='flex gap-8 mb-[10px]'>
   <div className='text-[20px] mt-[4px] text-[#8b5d6a]  bg-[#e1b4c1] p-[18px] rounded-[20px]'><FiMapPin /></div>
   <div>
-    <p className='text-[20px]'>Address</p>
-    <a href="#" className='text-[18px]'>Street 13 Cefer Cabbarli</a>
+    <p className='text-[20px] dark:text-white'>Address</p>
+    <a href="#" className='text-[18px] dark:text-white'>Street 13 Cefer Cabbarli</a>
   </div>
 </div>
 
@@ -64,7 +64,7 @@ function Contact() {
 </div>
       </section>
 
-      <section  className='mt-[60px] bg-[#efe1e9] py-[10px]'>
+      <section  className='mt-[60px] bg-[#efe1e9] py-[10px] dark:bg-gray-700'>
 <div className='container m-auto w-[90%]'>
   <p className='text-[50px] text-[#b17989]  find my-[30px]'>Get in touch</p>
    <div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>

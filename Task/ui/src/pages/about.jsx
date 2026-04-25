@@ -26,7 +26,7 @@ function About() {
         </div>
       </div>
 
-     <section className="bg-[#ca93a3] py-[40px] mt-[30px]">
+     <section className="bg-[#ca93a3] py-[40px]  dark:bg-gray-700">
 <div className="container w-[90%] m-auto ">
   <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5">
     <div className="mt-[40px]" >
@@ -55,7 +55,7 @@ Enjoy exploring our world of flowers!</p>
 
 
 
-<section>
+<section >
   <OurTeam/>
 </section>
 

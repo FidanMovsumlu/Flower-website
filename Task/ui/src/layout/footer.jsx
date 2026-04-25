@@ -11,7 +11,7 @@ import { faCcVisa, faCcMastercard } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 function Footer() {
   return (
-    <footer className="bg-[#895d6a] text-white py-10">
+    <footer className="bg-[#895d6a] text-white py-10 dark:bg-black">
       <div className="container mx-auto grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 gap-5 text-center ">
         <div className="max-w-xs mx-auto md:mx-0">
           <h2 className="text-2xl font-bold mb-4 text-left">Lilium</h2>

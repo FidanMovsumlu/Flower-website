@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
 .video-container {
   position: relative;
   width: 100%;
@@ -69,3 +71,4 @@
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+

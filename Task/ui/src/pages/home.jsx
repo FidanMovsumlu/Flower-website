@@ -1,5 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import CountAnimation from "../components/countanimation";
+import CounterDecimal from "../components/counterDecimal";
 function Home() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div>
       <div className="video-container">
@@ -27,48 +35,54 @@ function Home() {
           </button>
         </div>
       </div>
-      <section className="container w-[90%] m-auto py-[50px]"    >
-        <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-[60px] ">
-          <div  className="text-center m-[20px]">
+
+      <div className="dark:bg-gray-700 ">
+       
+      <section className="container w-[90%] m-auto py-[50px] "    >
+        <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 my-[60px]  ">
+          <div  className="text-center m-[20px] ">
             <div>
               <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
-                2500+
+                  <CountAnimation target={2500} />
               </p>
-              <p className="text-3xl text-[#474745]">Bouquet Sold</p>
+              <p className="text-3xl text-[#474745] dark:text-white">Bouquet Sold</p>
             </div>
           </div>
 
           <div className="text-center m-[20px]">
             <div>
               <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
-                2500+
+                 <CountAnimation target={2800} />
               </p>
-              <p className="text-3xl text-[#474745]">Happy Clients</p>
+              <p className="text-3xl text-[#474745] dark:text-white">Happy Clients</p>
             </div>
           </div>
 
           <div className="text-center m-[20px] ml-[25px]">
             <div>
               <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
-                2500+
+                  <CountAnimation target={8} />
               </p>
-              <p className="text-3xl text-[#474745]">Years of Experiance</p>
+              <p className="text-3xl text-[#474745] dark:text-white">Years of Experiance</p>
             </div>
           </div>
 
           <div className="text-center m-[20px]">
             <div>
-              <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">4.8</p>
-              <p className="text-3xl text-[#474745]">User Rating</p>
+              <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
+                <CounterDecimal target={4.8} />
+              </p>
+              <p className="text-3xl text-[#474745] dark:text-white">User Rating</p>
             </div>
           </div>
         </div>
       </section>
+</div>
 
-      <div className=" bg-[#FDEDEE]">
+      <div className=" bg-[#FDEDEE] dark:bg-gray-900">
         <section className="container w-[90%] m-auto">
-          <div className="mt-[60px] ">
-            <h2 className="text-center text-[50px] text-[#c59494] font-bold">
+          <div className="p-20 ">
+            <h2 className="text-center text-[50px] text-[#c59494] font-bold ">
               BestSeller
             </h2>
           </div>
@@ -77,13 +91,13 @@ function Home() {
 
      
 
-      <section className='relative h-[400px] my-[70px] flex bg-[url("https://preview.colorlib.com/theme/florist/img/call-bg.jpg")] bg-cover bg-center'>
+      <section className='relative h-[400px] -[70px] flex bg-[url("https://preview.colorlib.com/theme/florist/img/call-bg.jpg")] bg-cover bg-center'>
         <div className="relative z-10 text-center mt-[6%] pl-[20px]">
-          <h2 className="text-white text-5xl font-bold pattern ">
+          <h2 className="text-white text-5xl font-bold pattern dark:text-black">
             Let our plants make your
-          </h2>{" "}
+          </h2>
           <br />
-          <p className="text-white text-5xl font-bold pattern mb-[30px]">
+          <p className="text-white text-5xl font-bold pattern mb-[30px] dark:text-black">
             home more perfect.
           </p>
           <button className="bg-[#717c3e] rounded-tr-[40px] rounded-bl-[40px] px-[25px] py-[10px] mt-[20px] text-[18px] font-bold tracking-[2px] text-white">
@@ -92,9 +106,10 @@ function Home() {
         </div>
       </section>
 
- <section className="container w-[90%] m-auto py-[50px] ">
+<div className="dark:bg-black">
+ <section className="container w-[90%] m-auto py-[50px]  ">
         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 mt-[40px] mb-[40px]">
-          <div  className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
+          <div data-aos="fade-right"  className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
             <div className="mr-[32px] mt-[10px]">
               <img
                 src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-1.png"
@@ -103,15 +118,15 @@ function Home() {
               />
             </div>
             <div>
-              <p className="text-[34px] mb-[10px] font-[400]">100% Freshness</p>
-              <p className="text-[#a45173] text-[17px]">
+              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">100% Freshness</p>
+              <p className="text-[#a45173] text-[17px] font-bold">
                 Every flower is picked fresh to keep its natural beauty and
                 long-lasting charm.
               </p>
             </div>
           </div>
 
-          <div className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
+          <div data-aos="fade-right" className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
             <div className="mr-[32px] mt-[10px]">
               <img
                 src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-2.png"
@@ -120,15 +135,15 @@ function Home() {
               />
             </div>
             <div>
-              <p className="text-[34px] mb-[10px] font-[400]">Made by artist</p>
-              <p className="text-[#a45173] text-[17px]">
+              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">Made by artist</p>
+              <p className="text-[#a45173] text-[17px] font-bold">
                 Each bouquet is carefully crafted by talented artists with love
                 and creativity.
               </p>
             </div>
           </div>
 
-          <div className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
+          <div data-aos="fade-right" className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
             <div className="mr-[32px] mt-[10px]">
               <img
                 src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-3.png"
@@ -137,23 +152,24 @@ function Home() {
               />
             </div>
             <div>
-              <p className="text-[34px] mb-[10px] font-[400]">Own courier</p>
-              <p className="text-[#a45173] text-[17px]">
+              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">Own courier</p>
+              <p className="text-[#a45173] text-[17px] font-bold">
                 We deliver your flowers safely and quickly with our own trusted
                 courier service.
               </p>
             </div>
           </div>
+
         </div>
       </section>
+</div>
 
-
-<section className="bg-[#FDEDEE] py-[80px]">
+<section className="bg-[#FDEDEE] py-[80px] dark:bg-gray-700">
 <div className="container w-[90%] m-auto ">
   <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
-    <div className="mt-[40px]" >
+    <div className="mt-[40px] " data-aos="fade-up">
       <h2 className="text-[50px] text-[#e77b9a]  find">Find Your Perfect <br /> Bouquet Flower</h2>
-      <p className="text-[20px] my-[30px] text-[#525151]">Every flower tells a story of love and care.
+      <p className="text-[20px] my-[30px] text-[#525151] dark:text-white">Every flower tells a story of love and care.
 Choose <br /> the perfect bouquet to express your feelings. Discover <br /> beautiful flowers for every special moment.</p>
 
 <button className="bg-[#e77b9a]  rounded-tr-[40px] rounded-bl-[40px] px-[25px] py-[10px] mt-[20px]  text-[18px] font-bold tracking-[2px] text-white">
@@ -161,7 +177,7 @@ Choose <br /> the perfect bouquet to express your feelings. Discover <br /> beau
           </button>
     </div>
     
-<div className="grid grid-cols-2 gap-4 h-[500px] mt-[20px]">
+<div className="grid grid-cols-2 gap-4 h-[500px] mt-[20px]" data-aos="fade-up">
   
   
   <div className="grid grid-rows-2 gap-4 h-full">
