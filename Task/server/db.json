@@ -15,5 +15,261 @@
       "id": "PWkZrLWniZU"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  
+  "products":[
+    {
+      "id":"1",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2530/conversions/01KPG7JEZ120XKNWNST6V81N9T-webp.webp",
+      "name":"Creamy Nude Garden",
+      "price":"200 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"2",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2514/conversions/01KPDE1YFYZDVSM5WVE420PF1G-webp.webp",
+      "name":"Lavender Cloud",
+      "price":"65 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"3",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2524/conversions/01KPDYXSW5ZREE1ZG84F30H0BG-webp.webp",
+      "name":"Lilac Cream Elegance ",
+      "price":"150 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"4",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2455/conversions/01KNHGHW826EXWNBYK1KH0DJ1Q-webp.webp",
+      "name":"Pink Orchid Delight",
+      "price":"160 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"5",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/1879/conversions/01KFN6NF5ERAAXE9QM770900Q3-webp.webp",
+      "name":"Pion Harmony",
+      "price":"150 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"6",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/462/conversions/01K5ZMMEEP0CJETA95KP0N4KAZ-webp.webp",
+      "name":"Pink Elegiya Buketi",
+      "price":"170 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"7",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/1192/conversions/01KATG6E2VWCZQ4N3ZDHXTX9XB-webp.webp",
+      "name":"Bənövşəyi Xrizantema",
+      "price":"80 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"8",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2319/conversions/01KM7PW5BRNM3FQDGHBC2K0Y3B-webp.webp",
+      "name":"19 Rose Julietta",
+      "price":"200 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"9",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/1748/conversions/01KERWYSMTX1AZF9V8MMHS79K9-webp.webp",
+      "name":"101 Royal Purple Tulips",
+      "price":"400 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"10",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/437/conversions/01K5NZWDDRPS3HM6J9FCPVK35N-webp.webp",
+      "name":"25 qızıl gül və Liliyalar",
+      "price":"280 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"11",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2497/conversions/01KNXW374YY9ZP1V0672NJZ7F0-webp.webp",
+      "name":"Peach Velvet Calla",
+      "price":"65 ₼",
+      "category":"flower"
+    },
+     {
+      "id":"12",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2252/conversions/01KJSA4M6Y0W2939HJBF57ZV2F-webp.webp",
+      "name":"Pastel Bulud Buketi",
+      "price":"250 ₼",
+      "category":"flower"
+    },
+    {
+      "id":"13",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2273/conversions/01KJSCRK2ZNX9EAD23N3Y5AVA5-webp.webp",
+      "name":"Kamelia (Camellia Japonica)",
+      "price":"45 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"14",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2564/conversions/01KPX0HDK8GAS4H6HHJG1WTRT9-webp.webp",
+      "name":"Aglaonema Silver – Dekorativ Bitki",
+      "price":"85 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"15",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2268/conversions/01KJSC76228D9HQ3RAMK7CK6EB-webp.webp",
+      "name":"Cymbidium Orkide",
+      "price":"100 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"16",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/2571/conversions/01KPZDCAF49AXAWX06D26G57DG-webp.webp",
+      "name":"Phalaenopsis Orchid",
+      "price":"70 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"17",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/922/conversions/01K99V9F06G2S7JZYHY1M52258-webp.webp",
+      "name":"Anthurium Bitkisi",
+      "price":"60 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"18",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/918/conversions/01K99V5GZVSPC8W7Y57VCDXYTD-webp.webp",
+      "name":"Ağ Azaliya ",
+      "price":"35 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"19",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/1605/conversions/01KDFX5FFJ0MNHX4EWHZXSSR25-webp.webp",
+      "name":"Gardenya",
+      "price":"40 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"20",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/1611/conversions/01KDFYE0JK53NZ38TY0FAY4G73-webp.webp",
+      "name":"Aglaonema Green Calm",
+      "price":"75 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"21",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/1613/conversions/01KDFYRX10PYD218HXZMFSCPGT-webp.webp",
+      "name":"Phalaenopsis Orxideya ",
+      "price":"60 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"22",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/940/conversions/01K9ER4NJSKQ373YYZQ635SR1W-webp.webp",
+      "name":"Zamioculcas Bitkisi",
+      "price":"65 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"23",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/927/conversions/01K99YC1QCZWDRT57HX28PK23Q-webp.webp",
+      "name":"Dollar ağacı Zamioculcas",
+      "price":"85 ₼",
+      "category":"plant"
+    },
+     {
+      "id":"24",
+      "image":"https://fls-9f1d25fb-59b4-45a0-a922-2d3c65bf4734.laravel.cloud/933/conversions/01K9CAGFTS94QMJ46VBDZF2SDN-webp.webp",
+      "name":"Ficus Ginseng Bitkisi",
+      "price":"350 ₼",
+      "category":"plant"
+    },
+    {
+      "id":"25",
+      "image":"https://i.pinimg.com/1200x/34/96/eb/3496eb0f60320be039f0c46a7b1759dc.jpg",
+      "name":"Pink Wrapping Paper",
+      "price":"4 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"26",
+      "image":"https://i.pinimg.com/1200x/59/8f/1c/598f1cca0a9b7a0b4fd9558f43cec661.jpg",
+      "name":"Blue Wrapping Paper",
+      "price":"4 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"27",
+      "image":"https://i.pinimg.com/1200x/2e/e1/37/2ee1370be554f277e75c135306d92024.jpg",
+      "name":"Green Wrapping Paper",
+      "price":"4 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"28",
+      "image":"https://i.pinimg.com/1200x/43/99/c3/4399c324f087f7929737ea59a4a26540.jpg",
+      "name":"White Wrapping Paper",
+      "price":"4 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"29",
+      "image":"https://i.pinimg.com/1200x/5b/e2/e1/5be2e13307875e4e413d2079af63399f.jpg",
+      "name":"Dark Red Wrapping Paper",
+      "price":"4 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"30",
+      "image":"https://i.pinimg.com/1200x/a1/30/18/a1301836a11099e66ceefb9d8c566a08.jpg",
+      "name":"Soft Bear Toy",
+      "price":"60 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"31",
+      "image":"https://agciceyim.az/data/catalog/product/723/2160_md.jpg",
+      "name":"Soft Toy",
+      "price":"50 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"32",
+      "image":"https://agciceyim.az/data/catalog/product/507/1406_md.jpg",
+      "name":"Ferrero Rocher 300qr",
+      "price":"50 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"33",
+      "image":"https://agciceyim.az/data/catalog/product/506/1405_md.jpg",
+      "name":"Confetteria Raffaello 200qr",
+      "price":"35 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"34",
+      "image":"https://agciceyim.az/data/catalog/product/716/2149_md.png",
+      "name":"Love you box with chocolate",
+      "price":"40 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"35",
+      "image":"https://agciceyim.az/data/catalog/product/427/1139_md.jpg",
+      "name":"Toblerone (200qr)",
+      "price":"25 ₼",
+      "category":"accessories"
+    },
+     {
+      "id":"36",
+      "image":"https://agciceyim.az/data/catalog/product/426/1138_md.jpg",
+      "name":"Cupido Cocoa Truffles",
+      "price":"25 ₼",
+      "category":"accessories"
+    }
+    
+
+  ]
 }

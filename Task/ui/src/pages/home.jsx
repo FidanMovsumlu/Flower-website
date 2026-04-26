@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import CountAnimation from "../components/countanimation";
 import CounterDecimal from "../components/counterDecimal";
+import Slider from "../components/slider";
 function Home() {
   useEffect(() => {
     AOS.init();
@@ -80,13 +81,13 @@ function Home() {
 </div>
 
       <div className=" bg-[#FDEDEE] dark:bg-gray-900">
-        <section className="container w-[90%] m-auto">
-          <div className="p-20 ">
+          <div className="py-[50px] mb-[40px]">
             <h2 className="text-center text-[50px] text-[#c59494] font-bold ">
               BestSeller
             </h2>
+            <Slider/>
           </div>
-        </section>
+        
       </div>
 
      

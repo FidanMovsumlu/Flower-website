@@ -1,47 +1,47 @@
-import React, { useState } from "react";
+const Navbar2 = ({ activeCategory, setActiveCategory, setSortOrder}) => {
+  const categories = [ "flower", "plant", "accessories"];
 
-const productsData = [
-  { id: 1, name: "Rose", category: "flower" },
-  { id: 2, name: "Tulip", category: "flower" },
-  { id: 3, name: "Cactus", category: "plant" },
-  { id: 4, name: "Bonsai", category: "plant" },
-  { id: 5, name: "Vase", category: "accessories" },
-];
-
-const Navbar2 = () => {
-  const [activeCategory, setActiveCategory] = useState("flower");
-  const categories = ["flower", "plant", "accessories"];
-  const filteredProducts = productsData.filter(
-    (item) => item.category === activeCategory
-  );
   return (
-    <div className=" p-4 pt-[30px]">
-      <div className="flex gap-4">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)} 
-            className={`px-5 py-2 rounded-full capitalize 
-              ${
-                activeCategory === cat
-                  ? "bg-pink-500 text-white font-bold"
-                  : "text-pink-500 border border-pink-500 hover:bg-pink-100"
-              }
-            `}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+    <div className="p-4 pt-[10px] flex flex-col gap-4 ">
+      {categories.map((cat) => (
+        <button
+          key={cat}
+          onClick={() => setActiveCategory(cat)}
+          className={`px-5 py-2 rounded-full capitalize 
+            ${
+              activeCategory === cat
+                ? "bg-pink-500 text-white font-bold"
+                : "text-pink-500 border border-pink-500 hover:bg-pink-100"
+            }`}
+        >
+          {cat}
+        </button>
+      ))}
 
-      <div className="mt-4">
-        {filteredProducts.map((item) => (
-          <div key={item.id} className="mb-2">
-            {item.name}
-          </div>
-        ))}
-      </div>
+      <div className="mt-[50px] bg-[#efe1e9] p-4 rounded-xl shadow-md border-pink-400 border-2">
+  <h2 className="text-lg text-pink-500 font-bold mb-2 border-b-2 pb-2">
+    FILTER
+  </h2>
+  <div className="flex flex-col gap-2 mt-3">
+
+    <button
+      onClick={() => setSortOrder("low-high")}
+      className="bg-gray-100 hover:bg-pink-200 px-3 py-2 rounded-lg text-sm font-bold text-pink-600"
+    >
+      Lowest Price ↑
+    </button>
+
+    <button
+      onClick={() => setSortOrder("high-low")}
+      className="bg-gray-100 hover:bg-pink-200 px-3 py-2 rounded-lg text-sm font-bold text-pink-600"
+    >
+      Highest Price ↓
+    </button>
+
+  </div>
+</div>
     </div>
+
   );
 };
 
