@@ -4,11 +4,14 @@ import "aos/dist/aos.css";
 import CountAnimation from "../components/countanimation";
 import CounterDecimal from "../components/counterDecimal";
 import Slider from "../components/slider";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 function Home() {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+  const { t } = useTranslation();
   return (
     <div>
       <div className="video-container">
@@ -18,21 +21,19 @@ function Home() {
 
         <div className="content">
           <h1 className="text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px]  text-[#eb9ac0]  heading">
-            Fresh Flowers,
+           {t("hero_title")}
           </h1>
           <h2 className="text-[30px] sm:text-[50px] md:text-[65px] lg:text-[80px] mb-[25px] heading">
-            Happy Moments
+           {t("hero_subtitle")}
           </h2>
           <p className="text-[12px] sm:text-[10px] md:text-[18px] font-[500] text-[#f0c1ce]">
-            Flowers make every moment feel softer and more beautiful. They bring
-            color,
+            {t("hero_desc1")}
           </p>
           <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[#f0c1ce]">
-            
-            calm, and a gentle touch of happiness to our lives.
+            {t("hero_desc2")}
           </p>
           <button className="bg-[#ea6da7] rounded-[50px] px-[25px] py-[10px] mt-[20px] text-[18px] font-bold tracking-[2px]">
-            <a href="">Shop Now</a>
+            <Link to={"/product"}>{t("shop_now")}</Link>
           </button>
         </div>
       </div>
@@ -46,7 +47,7 @@ function Home() {
               <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
                   <CountAnimation target={2500} />
               </p>
-              <p className="text-3xl text-[#474745] dark:text-white">Bouquet Sold</p>
+              <p className="text-3xl text-[#474745] dark:text-white">{t("bouquet_sold")}</p>
             </div>
           </div>
 
@@ -55,7 +56,7 @@ function Home() {
               <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
                  <CountAnimation target={2800} />
               </p>
-              <p className="text-3xl text-[#474745] dark:text-white">Happy Clients</p>
+              <p className="text-3xl text-[#474745] dark:text-white">{t("happy_clients")}</p>
             </div>
           </div>
 
@@ -64,7 +65,7 @@ function Home() {
               <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
                   <CountAnimation target={8} />
               </p>
-              <p className="text-3xl text-[#474745] dark:text-white">Years of Experiance</p>
+              <p className="text-3xl text-[#474745] dark:text-white">{t("years_experience")}</p>
             </div>
           </div>
 
@@ -73,7 +74,7 @@ function Home() {
               <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
                 <CounterDecimal target={4.8} />
               </p>
-              <p className="text-3xl text-[#474745] dark:text-white">User Rating</p>
+              <p className="text-3xl text-[#474745] dark:text-white">{t("user_rating")}</p>
             </div>
           </div>
         </div>
@@ -83,7 +84,7 @@ function Home() {
       <div className=" bg-[#FDEDEE] dark:bg-gray-900">
           <div className="py-[50px] mb-[40px]">
             <h2 className="text-center text-[50px] text-[#c59494] font-bold ">
-              BestSeller
+             {t("bestseller")}
             </h2>
             <Slider/>
           </div>
@@ -95,14 +96,14 @@ function Home() {
       <section className='relative h-[400px] -[70px] flex bg-[url("https://preview.colorlib.com/theme/florist/img/call-bg.jpg")] bg-cover bg-center'>
         <div className="relative z-10 text-center mt-[6%] pl-[20px]">
           <h2 className="text-white text-5xl font-bold pattern dark:text-black">
-            Let our plants make your
+           {t("let")}
           </h2>
           <br />
           <p className="text-white text-5xl font-bold pattern mb-[30px] dark:text-black">
-            home more perfect.
+           {t("home")}
           </p>
           <button className="bg-[#717c3e] rounded-tr-[40px] rounded-bl-[40px] px-[25px] py-[10px] mt-[20px] text-[18px] font-bold tracking-[2px] text-white">
-            <a href="">Explore Plants</a>
+            <Link to={"/product"}>{t("explore_plants")}</Link>
           </button>
         </div>
       </section>
@@ -169,7 +170,7 @@ function Home() {
 <div className="container w-[90%] m-auto ">
   <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
     <div className="mt-[40px] " data-aos="fade-up">
-      <h2 className="text-[50px] text-[#e77b9a]  find">Find Your Perfect <br /> Bouquet Flower</h2>
+      <h2 className="text-[50px] text-[#e77b9a]  find">{t("find")} <br />{t("bouquet")}</h2>
       <p className="text-[20px] my-[30px] text-[#525151] dark:text-white">Every flower tells a story of love and care.
 Choose <br /> the perfect bouquet to express your feelings. Discover <br /> beautiful flowers for every special moment.</p>
 

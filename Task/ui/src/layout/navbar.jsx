@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -24,6 +25,14 @@ let id = localStorage.getItem("id")
 const signOut = () => {
   localStorage.removeItem("id")
 }
+const { i18n } = useTranslation();
+
+  const changeLanguage = (e) => {
+    const lang = e.target.value;
+    i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
+  }
+  const { t } = useTranslation();
   return (
   <div className={isDark ? "dark" : ""}>
     <nav className="w-full absolute top-0 left-0 z-50 px-6 md:px-10 py-2 flex items-center justify-between bg-[#efe1e9] text-white dark:bg-[#1F1F1F]">
@@ -34,13 +43,14 @@ const signOut = () => {
 
     
       <ul className="hidden md:flex gap-10 text-lg font-medium ">
-        <li className="text-[#f45da4] cursor-pointer"><Link to={"/"}>Home</Link></li>
-        <li className="text-[#f45da4] cursor-pointer"><Link to={"/about"}>About</Link></li>
-        <li className="text-[#f45da4] cursor-pointer"><Link to={"/product"}>Product</Link></li>
-        <li className="text-[#f45da4] cursor-pointer"><Link to={"/contact"}>Contact</Link></li>
+        <li className="text-[#f45da4] cursor-pointer"><Link to={"/"}>{t("home1")}</Link></li>
+        <li className="text-[#f45da4] cursor-pointer"><Link to={"/about"}>{t("about")}</Link></li>
+        <li className="text-[#f45da4] cursor-pointer"><Link to={"/product"}>{t("shop")}</Link></li>
+        <li className="text-[#f45da4] cursor-pointer"><Link to={"/contact"}>{t("contact")}</Link></li>
       </ul>
 
       <div className="hidden md:flex gap-4 text-[20px]">
+        
         <i className="fa-solid fa-heart cursor-pointer text-[#f45da4]"></i>
         <i className="fa-solid fa-cart-shopping cursor-pointer text-[#f45da4]"></i>
         <button onClick={toggleTheme}>
@@ -48,10 +58,18 @@ const signOut = () => {
   isDark ? ( <i className="fa-regular fa-lightbulb cursor-pointer text-[#f45da4] mb-[10px]"></i>) : (<i className="fa-solid fa-moon cursor-pointer text-[#f45da4] mb-[10px] "></i>)
 }
         </button>
+ <select
+        onChange={changeLanguage}
+        value={i18n.language}
+        className="border-pink-500 border-2 text-pink-500 rounded-[20px] focus:outline-none focus:ring-0 p-[5px] text-sm bg-transparent cursor-pointer"
+      >
+        <option value="en">EN</option>
+        <option value="az">AZ</option>
+        <option value="ru">RU</option>
+      </select>
         {
           id ? <Link to={"/login"} onClick={signOut}><i class="fa-solid fa-arrow-right-from-bracket  cursor-pointer text-[#f45da4] text-[20px] mb-[10px]"></i></Link> : <Link to={"/login"}><i class="fa-solid fa-arrow-right-to-bracket  cursor-pointer text-[#f45da4] text-[20px] mb-[10px]"></i></Link>
         }
-  
       </div>
 
       <div 
@@ -68,10 +86,10 @@ const signOut = () => {
         ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}>
         
         <ul className="flex flex-col items-center gap-4 text-[#f45da4]">
-          <li><Link  to={"/"}>Home</Link></li>
-          <li><Link to={"/about"}>About</Link></li>
-          <li><Link  to={"/product"}>Product</Link></li>
-          <li><Link to={"/contact"}>Contact</Link></li>
+          <li><Link  to={"/"}>{t("home1")}</Link></li>
+          <li><Link to={"/about"}>{t("about")}</Link></li>
+          <li><Link  to={"/product"}>{t("shop")}</Link></li>
+          <li><Link to={"/contact"}>{t("contact")}</Link></li>
         </ul>
 
 
