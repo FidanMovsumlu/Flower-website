@@ -120,10 +120,9 @@ function Home() {
               />
             </div>
             <div>
-              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">100% Freshness</p>
+              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">{t("freshness")}</p>
               <p className="text-[#a45173] text-[17px] font-bold">
-                Every flower is picked fresh to keep its natural beauty and
-                long-lasting charm.
+                {t("fresh_desc")}
               </p>
             </div>
           </div>
@@ -137,10 +136,9 @@ function Home() {
               />
             </div>
             <div>
-              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">Made by artist</p>
+              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">{t("made_by_artist")}</p>
               <p className="text-[#a45173] text-[17px] font-bold">
-                Each bouquet is carefully crafted by talented artists with love
-                and creativity.
+                {t("artist_desc")}
               </p>
             </div>
           </div>
@@ -154,10 +152,9 @@ function Home() {
               />
             </div>
             <div>
-              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">Own courier</p>
+              <p className="text-[34px] mb-[10px] font-[400] dark:text-white">{t("courier")}</p>
               <p className="text-[#a45173] text-[17px] font-bold">
-                We deliver your flowers safely and quickly with our own trusted
-                courier service.
+               {t("courier_desc")}
               </p>
             </div>
           </div>
@@ -171,11 +168,10 @@ function Home() {
   <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
     <div className="mt-[40px] " data-aos="fade-up">
       <h2 className="text-[50px] text-[#e77b9a]  find">{t("find")} <br />{t("bouquet")}</h2>
-      <p className="text-[20px] my-[30px] text-[#525151] dark:text-white">Every flower tells a story of love and care.
-Choose <br /> the perfect bouquet to express your feelings. Discover <br /> beautiful flowers for every special moment.</p>
+      <p className="text-[20px] my-[30px] text-[#525151] dark:text-white">{t("every")} <br /> {t("discover")}<br /> {t("find_desc")}</p>
 
 <button className="bg-[#e77b9a]  rounded-tr-[40px] rounded-bl-[40px] px-[25px] py-[10px] mt-[20px]  text-[18px] font-bold tracking-[2px] text-white">
-            <a href="">Explore Bouquets</a>
+            <Link to={"/product"}>{t("explore_bouquets")}</Link>
           </button>
     </div>
     

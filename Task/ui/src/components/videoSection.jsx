@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function VideoSection() {
   const [isOpen, setIsOpen] = useState(false);
-
+ const { t } = useTranslation();
   return (
+    
     <div >
       <button
         onClick={() => setIsOpen(true)}
         className="px-6 py-3  text-white font-bold rounded-full shadow-lg mt-[40px] bg-[#52A584] transition cursor-pointer"
       >
-        Watch Video
+        {t("watch")}
       </button>
 
       {isOpen && (

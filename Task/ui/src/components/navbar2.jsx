@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 const Navbar2 = ({ activeCategory, setActiveCategory, setSortOrder}) => {
   const categories = [ "flower", "plant", "accessories"];
-
+ const { t } = useTranslation();
   return (
     <div className="p-4 pt-[10px] flex flex-col gap-4 ">
       {categories.map((cat) => (
@@ -14,13 +16,13 @@ const Navbar2 = ({ activeCategory, setActiveCategory, setSortOrder}) => {
                 : "text-pink-500 border border-pink-500 hover:bg-pink-100"
             }`}
         >
-          {cat}
+            {t(`${cat}`)}
         </button>
       ))}
 
       <div className="mt-[50px] bg-[#efe1e9] p-4 rounded-xl shadow-md border-pink-400 border-2">
   <h2 className="text-lg text-pink-500 font-bold mb-2 border-b-2 pb-2">
-    FILTER
+    {t("filter")}
   </h2>
   <div className="flex flex-col gap-2 mt-3">
 
@@ -28,14 +30,14 @@ const Navbar2 = ({ activeCategory, setActiveCategory, setSortOrder}) => {
       onClick={() => setSortOrder("low-high")}
       className="bg-gray-100 hover:bg-pink-200 px-3 py-2 rounded-lg text-sm font-bold text-pink-600"
     >
-      Lowest Price ↑
+      {t("lowest")}
     </button>
 
     <button
       onClick={() => setSortOrder("high-low")}
       className="bg-gray-100 hover:bg-pink-200 px-3 py-2 rounded-lg text-sm font-bold text-pink-600"
     >
-      Highest Price ↓
+     {t("highest")}
     </button>
 
   </div>

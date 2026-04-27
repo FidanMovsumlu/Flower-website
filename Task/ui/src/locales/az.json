@@ -13,7 +13,9 @@
   "home":"daha mükəmməl etsin.",
   "find": "Mükəmməl Buket ",
   "bouquet":"Çiçəyinizi Tapın",
-  "find_desc": "Hər gül sevgi və qayğının hekayəsini danışır. Hisslərini ifadə etmək üçün mükəmməl buketi seç.",
+  "every":"Hər gül sevgi və qayğının hekayəsini ",
+  "discover":"danışır. Hisslərini ifadə etmək üçün",
+  "find_desc": "mükəmməl buketi seç.",
   "explore_bouquets": "Buketi kəşf et",
   "bouquet_sold": "Satılan buketlər",
   "happy_clients": "Məmnun müştərilər",
@@ -26,5 +28,62 @@
 
   "fresh_desc": "Hər gül təbii gözəlliyini və uzunömürlülüyünü qorumaq üçün təzə seçilir.",
   "artist_desc": "Hər buket sevgi və yaradıcılıqla peşəkar ustalar tərəfindən hazırlanır.",
-  "courier_desc": "Güllərimizi etibarlı kuryer xidmətimizlə tez və təhlükəsiz çatdırırıq."
+  "courier_desc": "Güllərimizi etibarlı kuryer xidmətimizlə tez və təhlükəsiz çatdırırıq.",
+
+  "description": "Biz sizin həyatınıza gözəllik və sevinc gətiririk. Hər anı sevgi və rənglərlə çiçəkləndirək. Təzə güllərimiz gününüzü işıqlandırmaq üçün diqqətlə seçilir. Hər bir tədbir üçün mükəmməl gülləri bizdə kəşf edin.",
+
+  "links": "Keçidlər",
+  "home3": "Ana səhifə",
+  "about1": "Haqqımızda",
+  "product": "Məhsullar",
+  "contact1": "Əlaqə",
+
+  "support": "Dəstək",
+  "faq": "FAQ",
+  "shipping": "Çatdırılma",
+  "returns": "Qaytarma",
+  "help": "Kömək",
+
+  "contactTitle": "Əlaqə",
+  "address": "Cefer Cabbarlı küçəsi 13",
+  "phone": "+1 234 122 122",
+
+  "securePayment": "Təhlükəsiz Ödəniş",
+
+  "rights": "© 2026 Baku Lilium. Bütün hüquqlar qorunur.",
+
+  "whoWeAre": "Biz kimik?",
+  "mission":"Missiyamız insanları güllər",
+  "mission1": "vasitəsilə xoşbəxt etməkdir.",
+  "shopNow": "İndi al",
+
+  "aboutTitle": "Haqqımızda",
+  "aboutText": "Bizim gül dükanımıza xoş gəlmisiniz! Biz hər tədbir üçün gözəl buketlər yaradırıq. Məqsədimiz təzə və rəngarəng güllərlə insanları xoşbəxt etməkdir. Keyfiyyətə çox önəm veririk və hər detala diqqətlə yanaşırıq. Sürətli çatdırılma və yüksək xidmət bizim vədimizdir. Güllərimiz yalnız hədiyyə deyil, sevgi və qayğını göstərmək üsuludur.",
+
+  "contactUs": "Bizimlə əlaqə",
+
+  "team": "Komandamız",
+"deliveryTitle":"Sürətli çatdırılma və yüksək",
+  "deliveryTitle1": "xidmət bizim vədimizdir.",
+  "watch":"Videoya baxın",
+
+  "flower":"Gül",
+  "plant":"Bitki",
+  "accessories":"Aksesuarlar",
+  "filter": "FİLTR",
+  "lowest": "Ən aşağı qiymət ↑",
+  "highest": "Ən yüksək qiymət ↓",
+  "searchPlaceholder": "Məhsul axtar...",
+
+  "contactTitle1": "Əlaqə",
+  "phone1": "Telefon",
+  "address1": "Ünvan",
+  "email": "Email",
+"workingHours": "İş saatları",
+  "mondayFriday": "Bazar ertəsi - Cümə",
+  "saturday": "Şənbə",
+  "sunday": "Bazar",
+  "getInTouch": "Bizimlə əlaqə saxlayın",
+  "messageInfo": "Bizə mesaj göndərin, tezliklə cavab verəcəyik.",
+  "submit": "Göndər"
 }

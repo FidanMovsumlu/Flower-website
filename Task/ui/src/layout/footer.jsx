@@ -9,17 +9,18 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faCcVisa, faCcMastercard } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
+
+
 function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-[#895d6a] text-white py-10 dark:bg-black">
       <div className="container mx-auto grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 gap-5 text-center ">
         <div className="max-w-xs mx-auto md:mx-0">
           <h2 className="text-2xl font-bold mb-4 text-left">Lilium</h2>
           <p className="text-[#d4d1d1] text-[15px] text-sm text-left">
-            We bring beauty and joy to your life with our exquisite flowers. Let
-            us make every moment bloom with love and color. Our fresh blooms are
-            carefully selected to brighten your day. Discover the perfect
-            flowers for every occasion with us.
+           {t("description")}
           </p>
         </div>
 
@@ -28,22 +29,22 @@ function Footer() {
           <ul className="space-y-2 text-[#d4d1d1]">
             <li>
               <Link to={"/"} className="hover:text-pink-400 transition">
-                Home
+               {t("home3")}
               </Link>
             </li>
             <li>
               <Link to={"/about"} className="hover:text-pink-400 transition">
-              About
+             {t("about1")}
               </Link>
             </li>
             <li>
              <Link to={"/product"} className="hover:text-pink-400 transition">
-             Product
+             {t("product")}
              </Link>
             </li>
             <li>
                <Link to={"/contact"} className="hover:text-pink-400 transition">
-             Contact
+             {t("contact1")}
              </Link>
             </li>
           </ul>
@@ -54,40 +55,40 @@ function Footer() {
           <ul className="space-y-2 text-[#d4d1d1] ">
             <li>
               <a href="#" className="hover:text-pink-400 transition">
-                FAQ
+                {t("faq")}
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-pink-400 transition">
-                Shipping
+               {t("shipping")}
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-pink-400 transition">
-                Returns
+                {t("returns")}
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-pink-400 transition">
-                Help
+              {t("help")}
               </a>
             </li>
           </ul>
         </div>
 
         <div className="max-w-xs mx-auto md:mx-0 ">
-          <h2 className="text-xl font-semibold mb-4 mr-[80px]">Contact</h2>
+          <h2 className="text-xl font-semibold mb-4 mr-[80px]">{t("contactTitle")}</h2>
           <div className="space-y-2 text-left flex flex-col">
             <div className="flex">
-              {" "}
+              
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
                 className="text-[20px] pr-[5px]"
-              />{" "}
-              <span className="text-[#d4d1d1]">Street 13 Cefer Cabbarli</span>
+              />
+              <span className="text-[#d4d1d1]">{t("address")}</span>
             </div>
             <div>
-              {" "}
+          
               <FontAwesomeIcon
                 icon={faPhone}
                 className="text-[18px] pr-[5px]"
@@ -129,7 +130,7 @@ function Footer() {
 
           <div className="text-left space-x-4">
             <h2 className="text-[18px] mt-[20px] mb-[10px] font-bold">
-              Secure Payment
+            {t("securePayment")}
             </h2>
             <FontAwesomeIcon icon={faCcVisa} className="text-4xl" />
             <FontAwesomeIcon icon={faCcMastercard} className="text-4xl" />
@@ -138,7 +139,7 @@ function Footer() {
       </div>
 
       <div className="text-center mt-10 text-white text-sm">
-        &copy; 2026 Baku Lilium. All rights reserved.
+     {t("rights")}
       </div>
     </footer>
   );

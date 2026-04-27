@@ -14,7 +14,9 @@
   "home":"home more perfect.",
   "find": "Find Your Perfect",
   "bouquet":"Bouquet Flower",
-  "find_desc": "Every flower tells a story of love and care. Choose the perfect bouquet to express your feelings. Discover beautiful flowers for every special moment.",
+  "every":"Every flower tells a story of love and care. Choose",
+  "discover":"the perfect bouquet to express your feelings. Discover",
+  "find_desc": "beautiful flowers for every special moment.",
   "explore_bouquets": "Explore Bouquets",
   "bouquet_sold": "Bouquet Sold",
   "happy_clients": "Happy Clients",
@@ -27,6 +29,66 @@
 
   "fresh_desc": "Every flower is picked fresh to keep its natural beauty and long-lasting charm.",
   "artist_desc": "Each bouquet is carefully crafted by talented artists with love and creativity.",
-  "courier_desc": "We deliver your flowers safely and quickly with our own trusted courier service."
+  "courier_desc": "We deliver your flowers safely and quickly with our own trusted courier service.",
+
+
+  "description": "We bring beauty and joy to your life. Let every moment bloom with love and colors. Our fresh flowers are carefully selected to brighten your day. Discover the perfect flowers for every occasion with us.",
+
+  "links": "Links",
+  "home3": "Home",
+  "about1": "About",
+  "product": "Products",
+  "contact1": "Contact",
+
+  "support": "Support",
+  "faq": "FAQ",
+  "shipping": "Shipping",
+  "returns": "Returns",
+  "help": "Help",
+
+  "contactTitle": "Contact",
+  "address": "Street 13 Cefer Cabbarli",
+  "phone": "+1 234 122 122",
+
+  "securePayment": "Secure Payment",
+
+  "rights": "© 2026 Baku Lilium. All rights reserved.",
+
+
+
+   "whoWeAre": "Who We Are?",
+   "mission":"Our mission is to make people",
+  "mission1": "happy through flowers.",
+  "shopNow": "Shop Now",
+
+  "aboutTitle": "About Us",
+  "aboutText": "Welcome to our flower shop! We create beautiful bouquets for every occasion. Our goal is to make people happy with fresh and colorful flowers. We care about quality and pay attention to every detail. Fast delivery and excellent service are our promise. Flowers are not just gifts, they are a way to show love and care.",
+
+  "contactUs": "Contact Us",
+
+  "team": "Our Team",
+"deliveryTitle":"Fast delivery and excellent",
+  "deliveryTitle1": "service are our promise.",
+  "watch":"Watch Video",
+
+  "flower":"Flower",
+  "plant":"Plant",
+  "accessories":"Accessories",
+  "filter": "FILTER",
+  "lowest": "Lowest Price ↑",
+  "highest": "Highest Price ↓",
+  "searchPlaceholder": "Search product...",
+
+   "contactTitle1": "Contact Us",
+  "phone1": "Phone",
+  "address1": "Address",
+  "email": "Email",
+"workingHours": "Working Hours",
+  "mondayFriday": "Monday - Friday",
+  "saturday": "Saturday",
+  "sunday": "Sunday",
+  "getInTouch": "Get in touch",
+  "messageInfo": "Send us a message and we’ll get back to you soon.",
+  "submit": "Submit"
 
 }

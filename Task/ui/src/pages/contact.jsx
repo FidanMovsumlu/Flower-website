@@ -10,19 +10,21 @@ import {
   faYoutube,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from 'react-i18next';
 function Contact() {
+    const { t } = useTranslation();
   return (
     <div>
       <section  className='mt-[10%] bg-[#efe1e9] py-[10px] dark:bg-gray-700'>
 <div className='container m-auto w-[90%]'>
-<h1 className='text-[50px] text-[#b17989]  find my-[30px] '>Contact Us</h1>
+<h1 className='text-[50px] text-[#b17989]  find my-[30px] '>{t("contactTitle1")}</h1>
 <div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
   <div className='flex flex-col gap-8'>
 
 <div className='flex gap-8'>
   <div className='text-[20px] mt-[4px] text-[#8b5d6a]  bg-[#e1b4c1] p-[18px] rounded-[20px]'><BsTelephone /></div>
   <div>
-    <p className='text-[20px] dark:text-white'>Phone</p>
+    <p className='text-[20px] dark:text-white'>{t("phone1")}</p>
     <a href="tel:" className='text-[18px] dark:text-white'>(555) 284-9103</a>
   </div>
 </div>
@@ -30,7 +32,7 @@ function Contact() {
 <div className='flex gap-8'>
   <div className='text-[20px] mt-[4px] text-[#8b5d6a]  bg-[#e1b4c1] p-[18px] rounded-[20px]'><LuMail /></div>
   <div>
-    <p className='text-[20px] dark:text-white'>Email</p>
+    <p className='text-[20px] dark:text-white'>{t("email")}</p>
     <a href="mailto:hello@atelierstudio.com" className='text-[18px] dark:text-white'>hello@atelierstudio.com</a>
   </div>
 </div>
@@ -38,8 +40,8 @@ function Contact() {
 <div className='flex gap-8 mb-[10px]'>
   <div className='text-[20px] mt-[4px] text-[#8b5d6a]  bg-[#e1b4c1] p-[18px] rounded-[20px]'><FiMapPin /></div>
   <div>
-    <p className='text-[20px] dark:text-white'>Address</p>
-    <a href="#" className='text-[18px] dark:text-white'>Street 13 Cefer Cabbarli</a>
+    <p className='text-[20px] dark:text-white'>{t("address1")}</p>
+    <a href="#" className='text-[18px] dark:text-white'>{t("address")}</a>
   </div>
 </div>
 
@@ -66,17 +68,17 @@ function Contact() {
 
       <section  className='mt-[60px] bg-[#efe1e9] py-[10px] dark:bg-gray-700'>
 <div className='container m-auto w-[90%]'>
-  <p className='text-[50px] text-[#b17989]  find my-[30px]'>Get in touch</p>
+  <p className='text-[50px] text-[#b17989]  find my-[30px]'>{t("getInTouch")}</p>
    <div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
 <div className="w-full md:w-[500px] h-[300px] md:h-[400px] mb-[20px] ">
 <img src="https://i.pinimg.com/1200x/01/5b/b7/015bb784cae6a7bb565e90eaae426f52.jpg" alt=""  className='w-full h-full object-cover rounded-xl shadow-lg'/>
 </div>
 
 <form className='mt-[22px] flex flex-col gap-6'>
-     <p className='text-[24px] text-[#7a535e] find'>Send us a message and we’ll get back to you soon.</p>
+     <p className='text-[24px] text-[#7a535e] find'>{t("messageInfo")}</p>
     <input type="email" placeholder='Email'  className="p-3 w-[300px] rounded-md border-2 border-[#b17989] focus:outline-none hover:shadow-md"/>
     <textarea placeholder='Message' className=' resize-none p-3 w-[300px] h-[100px]  md:w-[450px]  rounded-md border-2 border-[#b17989] focus:outline-none hover:shadow-md'></textarea>
-    <div><button className="bg-[#895d6a] text-[#f1dbe1] rounded-[40px] px-[25px] py-[10px] mt-[10px]  text-[18px] font-bold tracking-[2px] text-white" >Submit</button></div>
+    <div><button className="bg-[#895d6a] text-[#f1dbe1] rounded-[40px] px-[25px] py-[10px] mt-[10px]  text-[18px] font-bold tracking-[2px] text-white" >{t("submit")}</button></div>
   </form>
   </div>
 </div>

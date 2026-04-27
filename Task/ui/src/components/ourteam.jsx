@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const team = [
   {
@@ -19,10 +20,11 @@ const team = [
 ];
 
 function OurTeam() {
+  const { t } = useTranslation();
   return (
     <div className="py-12 bg-pink-50 mt-[40px] dark:bg-gray-700">
       <h2 className="text-5xl font-bold text-left mx-10 mb-[20px] text-[#ca93a3] pattern">
-        Our Team Members
+      {t("team")}
       </h2>
 
       <div className="container w-[90%] m-auto">
