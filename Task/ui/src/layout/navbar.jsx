@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { FavoritesContext } from "../context/FavoritesContext";
+import { useCart } from "../context/CartContext";
 
 function Navbar() {
+  const { setCartOpen } = useCart();
+  const { favorites } = useContext(FavoritesContext);
   const [open, setOpen] = useState(false)
    const [isDark, setDark] = useState(() => {
     return localStorage.getItem("theme") === "dark";
@@ -33,6 +38,8 @@ const { i18n } = useTranslation();
     localStorage.setItem("lang", lang);
   }
   const { t } = useTranslation();
+  
+
   return (
   <div className={isDark ? "dark" : ""}>
     <nav className="w-full absolute top-0 left-0 z-50 px-6 md:px-10 py-2 flex items-center justify-between bg-[#efe1e9] text-white dark:bg-[#1F1F1F]">
@@ -49,10 +56,18 @@ const { i18n } = useTranslation();
         <li className="text-[#f45da4] cursor-pointer"><Link to={"/contact"}>{t("contact")}</Link></li>
       </ul>
 
-      <div className="hidden md:flex gap-4 text-[20px]">
+      <div className="hidden md:flex  gap-4 text-[20px]">
         
-        <i className="fa-solid fa-heart cursor-pointer text-[#f45da4]"></i>
-        <i className="fa-solid fa-cart-shopping cursor-pointer text-[#f45da4]"></i>
+       <Link to={"/favorites"} className="relative">
+  <i className="fa-solid fa-heart cursor-pointer text-[#f45da4]"></i>
+
+  {favorites.length > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-[18px] h-[18px] flex items-center justify-center rounded-full">
+      {favorites.length}
+    </span>
+  )}
+</Link>
+        <i className="fa-solid fa-cart-shopping cursor-pointer text-[#f45da4] relative top-1.5" onClick={() => setCartOpen(true)} ></i>
         <button onClick={toggleTheme}>
 {
   isDark ? ( <i className="fa-regular fa-lightbulb cursor-pointer text-[#f45da4] mb-[10px]"></i>) : (<i className="fa-solid fa-moon cursor-pointer text-[#f45da4] mb-[10px] "></i>)
@@ -94,8 +109,16 @@ const { i18n } = useTranslation();
 
 
         <div className="flex gap-6 text-[#f45da4]">
-          <i className="fa-solid fa-heart"></i>
-          <i className="fa-solid fa-cart-shopping"></i>
+          <Link to={"/favorites"} className="relative">
+  <i className="fa-solid fa-heart"></i>
+
+  {favorites.length > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-[18px] h-[18px] flex items-center justify-center rounded-full">
+      {favorites.length}
+    </span>
+  )}
+</Link>
+          <i className="fa-solid fa-cart-shopping" onClick={() => setCartOpen(true)}></i>
          <button onClick={toggleTheme}>
 {
   isDark ? ( <i className="fa-regular fa-lightbulb cursor-pointer text-[#f45da4] mb-[10px]"></i>) : (<i className="fa-solid fa-moon cursor-pointer text-[#f45da4] mb-[10px] "></i>)

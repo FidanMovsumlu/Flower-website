@@ -4,7 +4,13 @@ import { RouterProvider } from 'react-router-dom'
 import router from './routes/router'
 import "./i18n";
 
-createRoot(document.getElementById('root')).render(
+import { FavoritesProvider } from "./context/FavoritesContext";
+import { CartProvider } from './context/CartContext';
 
-<RouterProvider router={router}/>  
+createRoot(document.getElementById('root')).render(
+  <FavoritesProvider> 
+    <CartProvider>
+    <RouterProvider router={router}/>
+    </CartProvider>
+  </FavoritesProvider>
 )
