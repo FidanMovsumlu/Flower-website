@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link, Navigate, Outlet } from "react-router-dom";
+import { PiFlowerTulipBold } from "react-icons/pi";
+import { MdBorderColor } from "react-icons/md";
+import { LuMessageSquareMore } from "react-icons/lu";
 function AdminLayout() {
      const user = JSON.parse(localStorage.getItem("user"));
 
@@ -15,9 +18,9 @@ function AdminLayout() {
 
         <nav className="flex flex-col gap-4 text-[#8b5d6a] font-bold">
          
-          <Link to="/admin/products" className="hover:text-pink-600">Products</Link>
-          <Link to="/admin/orders" className="hover:text-pink-600">Orders</Link>
-          <Link to="/admin/messages" className="hover:text-pink-600">Messages</Link>
+          <Link to="/admin/products" className="hover:text-pink-600 flex gap-2 text-[18px]"><PiFlowerTulipBold className='text-[20px] mt-[2px]' />Products</Link>
+          <Link to="/admin/orders" className="hover:text-pink-600 flex gap-2 text-[18px]"><MdBorderColor className='text-[20px] mt-[2px]' />Orders</Link>
+          <Link to="/admin/messages" className="hover:text-pink-600 flex gap-2 text-[18px]"><LuMessageSquareMore className='text-[20px] mt-[5px]'/> Messages</Link>
         </nav>
       </div>
 

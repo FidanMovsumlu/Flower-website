@@ -315,6 +315,19 @@
       "description": "Chocolate həm dadlı, həm də enerji verən şirniyyatdır. Müxtəlif tünd, südlü və ağ növləri mövcuddur. Xüsusi günlərdə hədiyyə kimi tez-tez seçilir. Stressi azaltmağa və əhvalı yaxşılaşdırmağa kömək edir. Hər yaş üçün sevilən klassik məhsuldur."
     }
   ],
-  "messages": [],
+  "messages": [
+    {
+      "email": "fidan@gmail.com",
+      "message": "Çatdırılma əladır.",
+      "date": "2026-05-06T11:37:29.963Z",
+      "id": "XglbxBgvl0s"
+    },
+    {
+      "email": "salam@gmail.com",
+      "message": "Paketlenme superdir",
+      "date": "2026-05-06T11:41:34.563Z",
+      "id": "PLcsZPz3BNc"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

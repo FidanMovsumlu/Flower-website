@@ -14,6 +14,7 @@ import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 import Order from "../pages/admin/orders/order";
 import Message from "../pages/admin/messages/message";
+import MyOrder from "../pages/myOrder";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
         element: <Product />,
         path: "product",
       },
+      
       {
   element: <PrivateRoute />,
   children: [

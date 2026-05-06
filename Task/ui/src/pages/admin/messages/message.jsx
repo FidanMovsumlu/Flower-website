@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function Message() {
   const [messages, setMessages] = useState([]);
 
-  // 🔹 messages gətir
+  
   const getMessages = async () => {
     const res = await fetch("http://localhost:3000/messages");
     const data = await res.json();
@@ -14,7 +14,7 @@ function Message() {
     getMessages();
   }, []);
 
-  // 🔴 delete message
+ 
   const deleteMessage = async (id) => {
     await fetch(`http://localhost:3000/messages/${id}`, {
       method: "DELETE",
