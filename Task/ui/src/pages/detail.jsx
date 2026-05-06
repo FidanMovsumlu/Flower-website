@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { FaHeart } from 'react-icons/fa';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { CiDeliveryTruck } from "react-icons/ci";
 import { TbArrowBackUp } from "react-icons/tb";
 import { BsBoxSeam } from "react-icons/bs";
@@ -13,6 +13,8 @@ function Detail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const { favorites, toggleFavorite } = useContext(FavoritesContext);
+  const user = JSON.parse(localStorage.getItem("user"));
+const navigate = useNavigate();
   useEffect(() => {
     fetch(`http://localhost:3000/products/${id}`)
       .then((res) => res.json())
@@ -22,8 +24,7 @@ function Detail() {
   if (!product) return <p>Loading...</p>;
 
   const isFavorite = favorites.some((fav) => fav.id === product.id);
-  
-
+ 
   return (
     <div className='mt-[98px] bg-[#efe1e9]'>
       <div className="w-[90%] m-auto py-[50px]">
@@ -51,22 +52,37 @@ function Detail() {
             <div className="flex items-center gap-[15px] mb-[40px]">
 
             
-              <button className="bg-[#875d69] text-white px-[20px] py-[10px] rounded-lg flex gap-2 cursor-pointer"  onClick={() => addToCart(product)} >
-                <AiOutlineShoppingCart className='mt-[2px] text-[20px]' />
-                Səbətə əlavə et
-              </button>
+              <button
+  className="bg-[#875d69] text-white px-[20px] py-[10px] rounded-lg flex gap-2 cursor-pointer"
+  onClick={() => {
+    if (!user) {
+      navigate("/login");
+      return;
+    }
+    addToCart(product);
+  }}
+>
+  <AiOutlineShoppingCart className="mt-[2px] text-[20px]" />
+  Səbətə əlavə et
+</button>
 
               
-              <button
-                onClick={() => toggleFavorite(product)}
-                className="w-[45px] h-[45px] flex items-center justify-center rounded-lg bg-[#875d69]  border border-[#875d69] cursor-pointer"
-              >
-                <FaHeart
-                  className={`text-[18px] transition ${
-                    isFavorite ? "text-red-500" : "text-white"
-                  }`}
-                />
-              </button>
+             <button
+  onClick={() => {
+    if (!user) {
+      navigate("/login");
+      return;
+    }
+    toggleFavorite(product);
+  }}
+  className="w-[45px] h-[45px] flex items-center justify-center rounded-lg bg-[#875d69] border border-[#875d69] cursor-pointer"
+>
+  <FaHeart
+    className={`text-[18px] transition ${
+      isFavorite ? "text-red-500" : "text-white"
+    }`}
+  />
+</button>
 
             </div>
 

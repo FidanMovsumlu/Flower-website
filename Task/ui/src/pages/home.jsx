@@ -81,16 +81,19 @@ function Home() {
       </section>
 </div>
 
-      <div className=" bg-[#FDEDEE] dark:bg-gray-900">
-          <div className="py-[50px] mb-[40px]">
-            <h2 className="text-center text-[50px] text-[#c59494] font-bold ">
-             {t("bestseller")}
-            </h2>
-            <Slider/>
-          </div>
-        
-      </div>
+      <div className="bg-[#FDEDEE] dark:bg-gray-900">
+  <div className="py-[30px] sm:py-[40px] lg:py-[50px] mb-[30px] sm:mb-[40px]">
+    
+    <h2 className="text-center text-[28px] sm:text-[36px] lg:text-[50px] text-[#c59494] font-bold">
+      {t("bestseller")}
+    </h2>
 
+    <div className="w-[95%] sm:w-[90%] m-auto mt-5">
+      <Slider />
+    </div>
+
+  </div>
+</div>
      
 
       <section className='relative h-[400px] -[70px] flex bg-[url("https://preview.colorlib.com/theme/florist/img/call-bg.jpg")] bg-cover bg-center'>

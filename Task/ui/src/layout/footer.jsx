@@ -101,30 +101,30 @@ function Footer() {
 
           <div className=" space-x-4 mt-[20px]">
             <div className="flex justify-center md:justify-start space-x-4">
-              <a
-                href="#"
+              <Link
+                to={"https://www.instagram.com/"}
                 className=" p-2 rounded-[20px] bg-white text-[#714d58] hover:bg-[#eaaeba] hover:text-white transition transform hover:-translate-y-1 hover:scale-110"
               >
                 <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to={"https://www.facebook.com/?locale=tr_TR"}
                 className=" p-2 rounded-[20px] bg-white text-[#714d58] hover:bg-[#eaaeba] hover:text-white transition transform hover:-translate-y-1 hover:scale-110"
               >
                 <FontAwesomeIcon icon={faFacebook} />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+               to={"https://www.tiktok.com/"}
                 className=" p-2 rounded-[20px] bg-white text-[#714d58] hover:bg-[#eaaeba] hover:text-white transition transform hover:-translate-y-1 hover:scale-110"
               >
                 <FontAwesomeIcon icon={faTiktok} />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+              to={"https://www.youtube.com/watch?v=Oz8v0c-1Wio&list=RDOz8v0c-1Wio&start_radio=1"}
                 className=" p-2 rounded-[20px] bg-white text-[#714d58] hover:bg-[#eaaeba] hover:text-white transition transform hover:-translate-y-1 hover:scale-110"
               >
                 <FontAwesomeIcon icon={faYoutube} />
-              </a>
+              </Link>
             </div>
           </div>
 

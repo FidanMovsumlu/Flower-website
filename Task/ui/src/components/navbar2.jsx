@@ -9,7 +9,7 @@ const Navbar2 = ({ activeCategory, setActiveCategory, setSortOrder}) => {
         <button
           key={cat}
           onClick={() => setActiveCategory(cat)}
-          className={`px-5 py-2 rounded-full capitalize 
+          className={`px-5 py-2 rounded-full capitalize  
             ${
               activeCategory === cat
                 ? "bg-pink-500 text-white font-bold"

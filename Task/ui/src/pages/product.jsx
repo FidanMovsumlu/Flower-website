@@ -44,10 +44,10 @@ const filteredProducts = products.filter((item) =>
       <section className="mt-[75px] py-[40px] ">
         
            <Search search={search} setSearch={setSearch}/>
-        <div className="container w-[90%] m-auto flex gap-6">
+        <div className="container w-[90%] m-auto flex  flex-col lg:flex-row gap-6">
 
        
-          <div className="w-[20%]">
+          <div className="w-full lg:w-[20%]">
             <Navbar2
               activeCategory={activeCategory}
               setActiveCategory={setActiveCategory}
@@ -56,7 +56,7 @@ const filteredProducts = products.filter((item) =>
           </div>
 
          
-          <div className="w-[80%]">
+          <div className="w-full lg:w-[80%]">
             <Products products={filteredProducts} />
           </div>
 

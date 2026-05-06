@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -15,29 +15,40 @@ function Login() {
   const [emailVal, setEmailVal] = useState(false)
     const [passVal, setPassVal] = useState(false)
     const [success, setSuccess] = useState(false)
-    const Navigate = useNavigate()
+    const navigate = useNavigate()
   const signIn = (e) => {
     e.preventDefault();
+
+    if (!user.email) setEmailVal(true);
+    if (!user.pass) setPassVal(true);
+
     if (user.email && user.pass) {
       fetch("http://localhost:3000/users")
         .then((res) => res.json())
         .then((data) => {
-          let founded = data.find((e) => e.email == user.email);
-          if (founded && founded.pass == user.pass) {
-            localStorage.setItem("id",founded.id)
-            Navigate("/")
+          
+          let founded = data.find(
+            (u) =>
+    u.email?.trim().toLowerCase() === user.email.trim().toLowerCase() &&
+    u.pass?.trim() === user.pass.trim()
+          );
+
+          if (founded) {
+            localStorage.setItem("user", JSON.stringify(founded));
+
+            
+            if (founded.role === "admin") {
+              navigate("/admin");
+            } else {
+              navigate("/");
+            }
           } else {
-          setSuccess(true)
+            setSuccess(true);
           }
         });
     }
-    if(!user.email){
-      setEmailVal(true)
-    }
-    if(!user.pass){
-      setPassVal(true)
-    }
   };
+  
   return (
     <div className="h-screen flex items-center justify-center bg-[radial-gradient(circle,_rgba(232,137,180,1)_0%,_rgba(255,255,255,1)_100%)]">
       <div className="bg-white p-8 rounded-xl shadow-lg ">

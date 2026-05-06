@@ -8,6 +8,14 @@ import Register from "../pages/register";
 import Login from "../pages/login";
 import Favorites from "../pages/Favorites";
 import Detail from "../pages/detail";
+import AdminLayout from "../pages/admin/adminlayout";
+import Products from "../pages/admin/products/products";
+import AdminRoute from "./AdminRoute";
+import PrivateRoute from "./PrivateRoute";
+import Order from "../pages/admin/orders/order";
+import Message from "../pages/admin/messages/message";
+
+
 const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -26,9 +34,11 @@ const router = createBrowserRouter([
         path: "product",
       },
       {
-        path: "/favorites",
-        element: <Favorites />,
-      },
+  element: <PrivateRoute />,
+  children: [
+    { path: "favorites", element: <Favorites /> }
+  ]
+},
       {
 path:"/products/:id",
 element:<Detail />
@@ -47,5 +57,27 @@ element:<Detail />
     element: <Login />,
     path: "login",
   },
+   {
+  path: "/admin",
+  element: <AdminRoute/>,
+  children: [
+    {
+  path: "/admin",
+  element: <AdminRoute />,
+  children: [
+    {
+      element: <AdminLayout />,
+      children: [
+        
+       { index: true, element: <Products /> },
+        { path: "products", element: <Products /> },
+        { path: "orders", element: <Order /> },
+        {path:"messages",element: <Message/>}
+      ],
+    },
+  ],
+},
+  ],
+}
 ]);
 export default router;

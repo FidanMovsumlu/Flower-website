@@ -4,8 +4,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 const Slider = () => {
   const [products, setProducts] = useState([]);
   const [index, setIndex] = useState(0);
-
-  const visibleCount = 5;
+  const [visibleCount, setVisibleCount] = useState(5);
 
   useEffect(() => {
     fetch("http://localhost:3000/products")
@@ -13,8 +12,32 @@ const Slider = () => {
       .then((data) => setProducts(data.slice(0, 8)));
   }, []);
 
+ 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCount(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(5);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  
+  useEffect(() => {
+    if (index > products.length - visibleCount) {
+      setIndex(0);
+    }
+  }, [visibleCount, products]);
+
   const nextSlide = () => {
-    if (index + visibleCount < products.length) {
+    if (index < products.length - visibleCount) {
       setIndex(index + 1);
     }
   };
@@ -30,14 +53,15 @@ const Slider = () => {
 
       <button
         onClick={prevSlide}
-        className="bg-gray-200 hover:bg-gray-300 w-12 h-12 rounded-full flex items-center justify-center text-xl"
+        className="bg-gray-200 w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
       >
-       <IoIosArrowBack/>
+        <IoIosArrowBack />
       </button>
 
+      
       <div className="overflow-hidden w-full">
         <div
-          className="flex transition-all duration-500 ease-in-out"
+          className="flex transition-transform duration-500"
           style={{
             transform: `translateX(-${index * (100 / visibleCount)}%)`,
           }}
@@ -45,18 +69,24 @@ const Slider = () => {
           {products.map((item) => (
             <div
               key={item.id}
-              className="w-1/5 p-3 flex-shrink-0"
+              className="flex-shrink-0 p-1.5"
+              style={{ width: `${100 / visibleCount}%` }}
             >
-              <div className="bg-white shadow-md rounded-2xl p-2 text-center">
+              <div className="bg-white rounded-xl shadow p-2">
 
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-[280px] object-cover rounded-xl"
+                  className="w-full h-[200px] sm:h-[250px] object-cover rounded"
                 />
 
-                <h3 className="mt-2 font-semibold">{item.name}</h3>
-                <p className="text-red-500">{item.price}</p>
+                <p className="mt-2 text-sm sm:text-base">
+                  {item.name}
+                </p>
+
+                <p className="text-red-500 text-sm">
+                  {item.price}
+                </p>
 
               </div>
             </div>
@@ -64,11 +94,12 @@ const Slider = () => {
         </div>
       </div>
 
+      
       <button
         onClick={nextSlide}
-        className="bg-gray-200 hover:bg-gray-300 w-12 h-12 rounded-full flex items-center justify-center text-xl"
+        className="bg-gray-200 w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
       >
-        <IoIosArrowForward/>
+        <IoIosArrowForward />
       </button>
 
     </div>
