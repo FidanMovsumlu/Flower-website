@@ -103,9 +103,9 @@ function Navbar() {
           
           <button onClick={toggleTheme}>
             {isDark ? (
-              <i className="fa-regular fa-lightbulb text-[#f45da4]"></i>
+              <i className="fa-regular fa-lightbulb text-[#f45da4] cursor-pointer"></i>
             ) : (
-              <i className="fa-solid fa-moon text-[#f45da4]"></i>
+              <i className="fa-solid fa-moon text-[#f45da4] cursor-pointer"></i>
             )}
           </button>
 
@@ -113,7 +113,7 @@ function Navbar() {
           <select
             onChange={changeLanguage}
             value={i18n.language}
-            className="border-2 border-pink-500 text-pink-500 rounded-[20px] px-2 py-1 bg-transparent outline-none text-sm"
+            className="border-2 border-pink-500 text-pink-500  cursor-pointer rounded-[20px] px-2 py-1 bg-transparent outline-none text-sm"
           >
             <option value="en">EN</option>
             <option value="az">AZ</option>

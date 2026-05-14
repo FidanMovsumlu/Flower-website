@@ -8,15 +8,11 @@ function Favorites() {
 
   return (
     <div className="bg-[#efe1e9] dark:bg-gray-700 min-h-screen pt-[100px]">
-      
       <div className="w-[90%] m-auto">
-
-        
         <h2 className="text-[50px] font-bold text-[#f45da4] text-center mb-10">
           Favorites
         </h2>
 
-    
         {favorites.length === 0 ? (
           <div className="min-h-[60vh] flex flex-col items-center justify-center text-center">
 

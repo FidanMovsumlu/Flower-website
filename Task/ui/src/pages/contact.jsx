@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { BsTelephone, } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 import { LuMail } from "react-icons/lu";
@@ -14,6 +16,10 @@ import { useTranslation } from 'react-i18next';
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function Contact() {
+    useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
     const { t } = useTranslation();
     const [email, setEmail] = useState("")
 const [message, setMessage] = useState("")
@@ -50,7 +56,8 @@ const handleSubmit = async (e) => {
 }
   return (
     <div>
-      <section  className='mt-[10%] bg-[#efe1e9] py-[10px] dark:bg-gray-700'>
+      <section  className='mt-[10%] bg-[#efe1e9] py-[10px] dark:bg-gray-700' data-aos="fade-up"  data-aos-duration="1200"
+    data-aos-delay="100">
 <div className='container m-auto w-[90%]'>
 <h1 className='text-[50px] text-[#b17989]  find my-[30px] '>{t("contactTitle1")}</h1>
 <div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
@@ -101,7 +108,8 @@ const handleSubmit = async (e) => {
 </div>
       </section>
 
-      <section  className='mt-[60px] bg-[#efe1e9] py-[10px] dark:bg-gray-700'>
+      <section  className='mt-[60px] bg-[#efe1e9] py-[10px] dark:bg-gray-700' data-aos="fade-up"  data-aos-duration="1200"
+    data-aos-delay="100">
 <div className='container m-auto w-[90%]'>
   <p className='text-[50px] text-[#b17989]  find my-[30px]'>{t("getInTouch")}</p>
    <div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>

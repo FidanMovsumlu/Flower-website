@@ -19,7 +19,7 @@ function Home() {
           <source src="/flower1.mp4" type="video/mp4" />
         </video>
 
-        <div className="content">
+        <div className="content" >
           <h1 className="text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px]  text-[#eb9ac0]  heading">
            {t("hero_title")}
           </h1>
@@ -38,57 +38,71 @@ function Home() {
         </div>
       </div>
 
-      <div className="dark:bg-gray-700 ">
-       
-      <section className="container w-[90%] m-auto py-[50px] "    >
-        <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 my-[60px]  ">
-          <div  className="text-center m-[20px] ">
-            <div>
-              <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
-                  <CountAnimation target={2500} />
-              </p>
-              <p className="text-3xl text-[#474745] dark:text-white">{t("bouquet_sold")}</p>
-            </div>
-          </div>
+      <div
+  className="dark:bg-gray-700"
+  data-aos="fade-up"
+  data-aos-duration="1200"
+>
+  <section className="container w-[90%] m-auto py-[50px]">
+    <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 my-[60px]">
 
-          <div className="text-center m-[20px]">
-            <div>
-              <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
-                 <CountAnimation target={2800} />
-              </p>
-              <p className="text-3xl text-[#474745] dark:text-white">{t("happy_clients")}</p>
-            </div>
-          </div>
-
-          <div className="text-center m-[20px] ml-[25px]">
-            <div>
-              <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
-                  <CountAnimation target={8} />
-              </p>
-              <p className="text-3xl text-[#474745] dark:text-white">{t("years_experience")}</p>
-            </div>
-          </div>
-
-          <div className="text-center m-[20px]">
-            <div>
-              <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
-                <CounterDecimal target={4.8} />
-              </p>
-              <p className="text-3xl text-[#474745] dark:text-white">{t("user_rating")}</p>
-            </div>
-          </div>
+      <div className="text-center m-[20px]">
+        <div>
+          <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
+            <CountAnimation target={2500} />
+          </p>
+          <p className="text-3xl text-[#474745] dark:text-white">
+            {t("bouquet_sold")}
+          </p>
         </div>
-      </section>
+      </div>
+
+      <div className="text-center m-[20px]">
+        <div>
+          <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
+            <CountAnimation target={2800} />
+          </p>
+          <p className="text-3xl text-[#474745] dark:text-white">
+            {t("happy_clients")}
+          </p>
+        </div>
+      </div>
+
+      <div className="text-center m-[20px] ml-[25px]">
+        <div>
+          <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
+            <CountAnimation target={8} />
+          </p>
+          <p className="text-3xl text-[#474745] dark:text-white">
+            {t("years_experience")}
+          </p>
+        </div>
+      </div>
+
+      <div className="text-center m-[20px]">
+        <div>
+          <p className="text-4xl mb-[20px] font-bold text-[#ea6da7]">
+            <CounterDecimal target={4.8} />
+          </p>
+          <p className="text-3xl text-[#474745] dark:text-white">
+            {t("user_rating")}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
 </div>
 
-      <div className="bg-[#FDEDEE] dark:bg-gray-900">
-  <div className="py-[30px] sm:py-[40px] lg:py-[50px] mb-[30px] sm:mb-[40px]">
+      <div className="bg-[#FDEDEE] dark:bg-gray-900"   data-aos="fade-up"
+  data-aos-duration="1200" >
+  <div className="py-[40px] sm:py-[40px] lg:py-[50px] mb-[30px] sm:mb-[40px]">
     
     <h2 className="text-center text-[28px] sm:text-[36px] lg:text-[50px] text-[#c59494] font-bold">
       {t("bestseller")}
     </h2>
 
-    <div className="w-[95%] sm:w-[90%] m-auto mt-5">
+    <div className="w-[95%] sm:w-[90%] m-auto mt-5 pb-[30px]">
       <Slider />
     </div>
 
@@ -96,8 +110,8 @@ function Home() {
 </div>
      
 
-      <section className='relative h-[400px] -[70px] flex bg-[url("https://preview.colorlib.com/theme/florist/img/call-bg.jpg")] bg-cover bg-center'>
-        <div className="relative z-10 text-center mt-[6%] pl-[20px]">
+      <section data-aos="fade-up" data-aos-duration="1400" className='relative h-[400px] -[70px] flex bg-[url("https://preview.colorlib.com/theme/florist/img/call-bg.jpg")] bg-cover bg-center'>
+        <div className="relative z-10 text-center mt-[6%] pl-[20px]" >
           <h2 className="text-white text-5xl font-bold pattern dark:text-black">
            {t("let")}
           </h2>
@@ -114,7 +128,7 @@ function Home() {
 <div className="dark:bg-black">
  <section className="container w-[90%] m-auto py-[50px]  ">
         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 mt-[40px] mb-[40px]">
-          <div data-aos="fade-right"  className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
+          <div data-aos="fade-right"  data-aos-delay="700" className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
             <div className="mr-[32px] mt-[10px]">
               <img
                 src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-1.png"
@@ -130,7 +144,7 @@ function Home() {
             </div>
           </div>
 
-          <div data-aos="fade-right" className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
+          <div data-aos="fade-right" data-aos-delay="700" className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
             <div className="mr-[32px] mt-[10px]">
               <img
                 src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-2.png"
@@ -146,7 +160,7 @@ function Home() {
             </div>
           </div>
 
-          <div data-aos="fade-right" className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
+          <div data-aos="fade-right"  data-aos-delay="700" className="flex my-[20px] mx-[18px] border-2 border-[#F674A5] p-5 rounded-[20px] shadow-lg transition transform duration-300 hover:scale-105 hover:-translate-y-2">
             <div className="mr-[32px] mt-[10px]">
               <img
                 src="https://preview.colorlib.com/theme/florist/img/benefit/benefit-3.png"
@@ -169,7 +183,7 @@ function Home() {
 <section className="bg-[#FDEDEE] py-[80px] dark:bg-gray-700">
 <div className="container w-[90%] m-auto ">
   <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 ">
-    <div className="mt-[40px] " data-aos="fade-up">
+    <div className="mt-[40px] " data-aos="fade-up" data-aos-delay="800">
       <h2 className="text-[50px] text-[#e77b9a]  find">{t("find")} <br />{t("bouquet")}</h2>
       <p className="text-[20px] my-[30px] text-[#525151] dark:text-white">{t("every")} <br /> {t("discover")}<br /> {t("find_desc")}</p>
 

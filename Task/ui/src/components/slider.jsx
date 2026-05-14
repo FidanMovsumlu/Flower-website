@@ -49,7 +49,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="w-[90%] m-auto mt-10 flex items-center gap-2">
+    <div className=" mt-10 flex items-center gap-2">
 
       <button
         onClick={prevSlide}
@@ -77,7 +77,7 @@ const Slider = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-[200px] sm:h-[250px] object-cover rounded"
+                  className="w-full h-[400px] sm:h-[300px] object-cover rounded"
                 />
 
                 <p className="mt-2 text-sm sm:text-base">

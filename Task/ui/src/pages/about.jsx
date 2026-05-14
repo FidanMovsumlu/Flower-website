@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import OurTeam from '../components/ourteam'
 import VideoSection from '../components/videoSection'
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function About() {
+  useEffect(() => {
+      AOS.init();
+      AOS.refresh();
+    }, []);
    const { t } = useTranslation();
   return (
     <div>
@@ -29,7 +34,8 @@ function About() {
         </div>
       </div>
 
-     <section className="bg-[#ca93a3] py-[40px]  dark:bg-gray-700">
+     <section className="bg-[#ca93a3] py-[40px]  dark:bg-gray-700" data-aos="fade-up"  data-aos-duration="1200"
+    data-aos-delay="100">
 <div className="container w-[90%] m-auto ">
   <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5">
     <div className="mt-[40px]" >
@@ -50,11 +56,13 @@ function About() {
 
 
 
-<section >
+<section data-aos="fade-up"  data-aos-duration="1200"
+    data-aos-delay="100">
   <OurTeam/>
 </section>
 
- <section className='relative h-[400px] my-[70px] flex bg-[url("https://cdn.shopify.com/s/files/1/1252/1803/files/ExpressDelivery-Desktop_1.jpg?v=1721097269")] bg-cover bg-center'>
+ <section data-aos="fade-up"  data-aos-duration="1200"
+    data-aos-delay="100" className='relative h-[400px] my-[70px] flex bg-[url("https://cdn.shopify.com/s/files/1/1252/1803/files/ExpressDelivery-Desktop_1.jpg?v=1721097269")] bg-cover bg-center'>
         <div className="relative z-10 text-center mt-[6%] pl-[20px]">
           <h2 className="text-[#52A584] text-5xl font-bold pattern mt-[20px]">
           {t("deliveryTitle")} <br /> <br />{t("deliveryTitle1")}
